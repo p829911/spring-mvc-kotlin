@@ -27,11 +27,16 @@ dependencies {
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+    implementation("org.jetbrains.kotlin:kotlin-allopen")
+    implementation("org.jetbrains.kotlin:kotlin-noarg")
+    implementation("org.apache.tomcat.embed:tomcat-embed-jasper")
+    implementation("javax.servlet:jstl")
     compileOnly("org.projectlombok:lombok")
     annotationProcessor("org.projectlombok:lombok")
     providedRuntime("org.springframework.boot:spring-boot-starter-tomcat")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
+
 
 tasks.withType<KotlinCompile> {
     kotlinOptions {
