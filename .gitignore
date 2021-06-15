@@ -2,3 +2,6 @@
 *.zip
 .gradle
 .idea
+build
+gradle
+out
