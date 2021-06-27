@@ -29,8 +29,10 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     implementation("org.jetbrains.kotlin:kotlin-allopen")
     implementation("org.jetbrains.kotlin:kotlin-noarg")
+    // jsp 추가
     implementation("org.apache.tomcat.embed:tomcat-embed-jasper")
     implementation("javax.servlet:jstl")
+    // jsp 추가 끝
     compileOnly("org.projectlombok:lombok")
     annotationProcessor("org.projectlombok:lombok")
     providedRuntime("org.springframework.boot:spring-boot-starter-tomcat")
