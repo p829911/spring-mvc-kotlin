@@ -13,6 +13,7 @@ class MemberSaveControllerV1 : ControllerV1 {
 
     override fun process(request: HttpServletRequest?, response: HttpServletResponse?) {
         val username = request?.getParameter("username")
+
         val age = Integer.parseInt(request?.getParameter("age"))
         val member = Member(username, age)
         memberRepository.save(member)

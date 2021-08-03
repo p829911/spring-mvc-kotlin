@@ -2,7 +2,6 @@ package hello.servlet.web.servlet
 
 import hello.servlet.domain.member.Member
 import hello.servlet.domain.member.MemberRepository
-import javax.servlet.RequestDispatcher
 import javax.servlet.annotation.WebServlet
 import javax.servlet.http.HttpServlet
 import javax.servlet.http.HttpServletRequest
@@ -15,9 +14,9 @@ class MemberSaveServlet : HttpServlet() {
 
     override fun service(request: HttpServletRequest?, response: HttpServletResponse?) {
         val username = request?.getParameter("username")
-        val age = request?.getParameter("age")?.toInt()
+        val age = Integer.parseInt(request?.getParameter("age"))
 
-        val member = Member(username!!, age!!)
+        val member = Member(username, age)
         memberRepository.save(member)
 
         response?.contentType = "text/html"
